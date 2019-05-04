@@ -16,41 +16,28 @@
 
         <?php include "lib/lib.php"; ?>
 
-        <div name="header">
-
+        <div class="topbar">
+            <a href="pages/contact.*">Rejoindre</a>
+            <a id="homebutton" href="<?php echo homePage($homeDir); ?>">Retour</a>
             <div class="dropdown">
                 <button class="dropbutton">Services</button>
-                <div class="dropcontent">
-                    <a href="">Soutien Technique</a>
-                    <a href="">Construction et Reparation PC</a>
-                    <a href="">Consultation Cryptomonnaie et Mining</a>
-                    <a href="">Autres</a>
-                </div>
-            </div>
-
-            <div class="static">
-                <button class="staticbutton"><a href="pages/contact.*">Rejoindre</a></button>
-            </div>
-
+                    <div class="dropcontent">
+                        <a href="">Soutien Technique</a>
+                        <a href="">Construction et Reparation PC</a>
+                        <a href="">Cryptomonnaie et Mining</a>
+                        <a href="">Autres</a>
+                    </div>
+            </div>  
         </div>
 
-        <div name="main">
+        <div class="main">
 
             <div class="center">
-
-                <ul>
-                    <li class="image">
-                        <img src="img/moi.jpg" alt="soooooo ugly!">
-                    </li>
-                    <li class="name">   
-                        <h1> Olivier Drouin </h1>
-                    </li>
-
-                    <li class="desc">
-                        <?php displayContent("description", getcwd()); ?>
-                    </li>
-                </ul>
-
+                <img class="image" src="img/moi.jpg" alt="soooooo ugly!">
+                <h1 class="name"> Olivier Drouin </h1>
+                <h5 class="desc">
+                    <?php displayContent("description", getcwd()); ?>
+                </h5>
             </div>
 
             <div class="side">

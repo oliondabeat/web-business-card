@@ -1,5 +1,116 @@
+/*
+    
+    some grimy css, shoutouts to w3schools kek 
+
+    olivier drouin 2019
+
+*/
+
+/* main page styling */
+
 body {
+    /* background by svgbackgrounds.com */
     background-color: #000800;
     background-image: url(../img/bg.svg);
-    /* background by SVGBackgrounds.com */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.main {
+    display: block;
+    color: white;
+}
+
+.center {
+    max-width: 42%;
+    margin-left: 29%;
+    margin-right: 29%;
+    margin-top: 4.20%;
+    padding: 4.20%;
+    text-align: justify;
+    background-color: #001000bb;
+}
+
+.center .name {
+    text-align: center;
+}
+
+.center img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+/* header and dropdown menu */
+
+.topbar {
+    overflow: hidden;
+    background-color: #001000bb;
+    width: 100%;
+}
+
+.topbar a {
+    float: left;
+    padding: 14px 16px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+#homebutton {
+    float: right;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbutton {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.topbar a:hover, .dropdown:hover .dropbutton {
+    background-color: #014100bb;
+    -webkit-transition: background-color, 1s;
+}
+
+.dropcontent {
+    display: none;
+    position: absolute;
+    background-color: #001000bb;
+    min-width: auto;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropcontent a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left
+}
+
+.dropcontent a:hover {
+    background-color: #014100bb;
+    -webkit-transition: background-color, 1s;
+}
+
+.dropdown:hover .dropcontent {
+    display: block; 
 }

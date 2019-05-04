@@ -1,5 +1,11 @@
 <?php
 
+    $homeDir = getcwd();
+
+    function homePage($homeDir) {
+        return $homeDir;
+    }
+
     function displayContent($type, $indexDir) {
         chdir($indexDir) && chdir('content');
         $file = $type . ".txt";
