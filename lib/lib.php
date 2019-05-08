@@ -8,37 +8,21 @@
         print $content;
     }
 
-    //dynamic contact page
-    function messageSent($subject) {
-        switch ($subject) {
-            case "techsup" :
-                echo "Soutien technique: envoyé avec succès!";
-                break;
-            case "pc" :
-                echo "Bien reçu! Je te reviens là dessus sous peu!";
-                break;
-            case "crypto" :
-                echo "Vous êtes venu au bon endroit!";
-                break;
-            case "other" :
-                echo "Merci!";
-                break;
-        }
-    }
-
     //mailing
     function sendMail($subject, $details) {
         $myEmail = "olivier.drouin@protonmail.com";
-        $destinationEmail = $details['email'];
-        $message = getMessageContent($subject);
-        mail()
-    }
-
-    function processMessage($formData) {
-        $out = [];
-        $email = $formData['email'];
-        $msg = $formData['msg'];
-        $name = $formData['name'];   
+        $clientEmail = $details['email'];
+        $clientName = $details['name'];
+        $clientMessage = "message de " . $clientEmail . "\n" . $details['msg'];
+        $response = getMessageContent($subject);
+        if ($clientName != '') {
+            $response = "Merci, " . $clientName . ", " . getMessageContent($subject);
+            $clientMessage = "message de " . $clientName . "(" . $clientEmail . ")" . "\n" . $details['msg'];
+        }
+        //to client
+        mail($clientEmail, messageSubject($subject), $response);
+        //to me
+        mail($myEmail, "nouveau message!", $clientMessage);
     }
 
     //utility

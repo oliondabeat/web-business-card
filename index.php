@@ -27,7 +27,7 @@
                         <a href="pages/contact.php?subject=techsup">Soutien Technique</a>
                         <a href="pages/contact.php?subject=pc">Construction et Reparation PC</a>
                         <a href="pages/contact.php?subject=crypto">Cryptomonnaie et Mining</a>
-                        <a href="pages/contact.php">Autres</a>
+                        <a href="pages/contact.php?subject=other">Autres</a>
                     </div>
             </div>
             <a href="pages/testimonials.php">Témoignages</a> 

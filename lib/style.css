@@ -147,7 +147,7 @@ textarea {
 
 /* message send confirmation page */
 
-.message {
+.message h1, h5 {
     margin: auto;
     padding-top: 5em;
     width: 100%;
