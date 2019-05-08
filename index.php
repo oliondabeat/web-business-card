@@ -9,7 +9,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Wagwan</title>
+        <?php
 
+        ?>
     </head>
 
     <body>
@@ -17,17 +19,18 @@
         <?php include "lib/lib.php"; ?>
 
         <div class="topbar">
-            <a href="pages/contact.*">Rejoindre</a>
-            <a id="homebutton" href="<?php echo homePage($homeDir); ?>">Retour</a>
+            <a href="pages/contact.php">Rejoindre</a>
+            <a id="homebutton" href="#">Retour</a>
             <div class="dropdown">
                 <button class="dropbutton">Services</button>
                     <div class="dropcontent">
-                        <a href="">Soutien Technique</a>
-                        <a href="">Construction et Reparation PC</a>
-                        <a href="">Cryptomonnaie et Mining</a>
-                        <a href="">Autres</a>
+                        <a href="pages/contact.php?subject=techsup">Soutien Technique</a>
+                        <a href="pages/contact.php?subject=pc">Construction et Reparation PC</a>
+                        <a href="pages/contact.php?subject=crypto">Cryptomonnaie et Mining</a>
+                        <a href="pages/contact.php">Autres</a>
                     </div>
-            </div>  
+            </div>
+            <a href="pages/testimonials.php">Témoignages</a> 
         </div>
 
         <div class="main">
@@ -36,7 +39,7 @@
                 <img class="image" src="img/moi.jpg" alt="soooooo ugly!">
                 <h1 class="name"> Olivier Drouin </h1>
                 <h5 class="desc">
-                    <?php displayContent("description", getcwd()); ?>
+                    <?php displayContent("description", "content"); ?>
                 </h5>
             </div>
 
